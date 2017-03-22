@@ -7,8 +7,9 @@ fi
 
 ldflags="-X github.com/vmware/govmomi/govc/version.gitVersion=${git_version}"
 
-BUILD_OS=${BUILD_OS:-darwin linux windows freebsd}
-BUILD_ARCH=${BUILD_ARCH:-386 amd64}
+#BUILD_OS=${BUILD_OS:-darwin linux windows freebsd}
+BUILD_OS=${BUILD_OS:-linux }
+BUILD_ARCH=${BUILD_ARCH:-amd64}
 
 for os in ${BUILD_OS}; do
   export GOOS="${os}"
